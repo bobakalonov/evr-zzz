@@ -1,0 +1,113 @@
+.about-page {
+  .my-container {
+    background: $light;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+  }
+  img {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 12px;
+  }
+  &__title {
+    @include font(27, 36, 600);
+    color: $dark;
+    margin-bottom: 30px;
+  }
+  &__desc {
+    margin-bottom: 30px;
+    p {
+      color: #252626 !important;
+      @include font(20, 28, 400);
+    }
+    * {
+      font-family: $font !important;
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    a {
+      padding: 12px 40px;
+      border-radius: 12px;
+      @include font(16, 22, 500);
+      color: $dark;
+    }
+    .contact-btn {
+      background: $secondary;
+    }
+    .ad-btn {
+      background: $bg;
+    }
+  }
+}
+.v-expansion-panels {
+  box-shadow: none !important;
+  .v-expansion-panel {
+    background: $bg !important;
+    border-radius: 12px;
+    &:not(last-child) {
+      margin-bottom: 20px;
+    }
+    &::before,
+    &::after {
+      box-shadow: none !important;
+      border: none !important;
+      outline: none !important;
+    }
+    .v-expansion-panel-header {
+      @include font(20, 28, 500);
+      color: $dark;
+    }
+    .v-expansion-panel-content {
+      @include font(16, 24, 400);
+      color: #252626;
+      padding: 30px 0;
+    }
+  }
+}
+@include media(960px) {
+  .about-page {
+    .my-container {
+      background: $light;
+      padding: 25px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      border-radius: 0px;
+    }
+    img {
+      border-radius: 10px;
+    }
+    &__title {
+      @include font(22, 30, 600);
+      margin-bottom: 20px;
+    }
+    &__desc {
+      margin-bottom: 30px;
+      p {
+        @include font(18, 26, 400);
+      }
+    }
+    &__links {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+  .v-expansion-panels {
+    .v-expansion-panel {
+      border-radius: 10px;
+      .v-expansion-panel-header {
+        @include font(18, 22, 500);
+      }
+      .v-expansion-panel-content {
+        @include font(14, 20, 400);
+      }
+    }
+  }
+}

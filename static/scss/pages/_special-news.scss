@@ -1,0 +1,22 @@
+.special-news {
+  margin-bottom: 50px;
+  .my-container {
+    background: $light;
+    padding: 30px;
+    border-radius: 12px;
+  }
+  .section-title {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 53px;
+      height: 6px;
+      background: $primary;
+    }
+  }
+}

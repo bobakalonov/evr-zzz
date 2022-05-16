@@ -1,0 +1,48 @@
+.card-news-audio {
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__category {
+      @include font(12, 16, 400);
+      color: $primary;
+      margin-bottom: 13px;
+    }
+    &__title {
+      @include font(16, 21, 500);
+      color: $dark;
+      margin-bottom: 14px;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &__options {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 12px;
+      @include font(14, 18, 400);
+      color: $mutedColor;
+      margin-bottom: 14px;
+      p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+  }
+  @include media(1320px) {
+    .details {
+      &__title {
+        @include font(14, 18, 500);
+      }
+      &__options {
+        @include font(12, 16, 400);
+      }
+    }
+  }
+}

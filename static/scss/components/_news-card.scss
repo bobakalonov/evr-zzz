@@ -1,0 +1,71 @@
+.news-card {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  .img {
+    width: 150px;
+    height: 128px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .details {
+    width: calc(100% - 170px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__category {
+      @include font(12, 16, 400);
+      color: $primary;
+    }
+    &__title {
+      @include font(16, 21, 500);
+      color: $dark;
+      line-clamp: 3;
+      box-orient: vertical;
+      overflow: hidden;
+      margin-bottom: 12px;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &__options {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      @include font(14, 18, 400);
+      color: $mutedColor;
+      p {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+  }
+  @include media(1320px) {
+    .img {
+      width: 130px;
+      height: 110px;
+      border-radius: 6px;
+      margin-right: 15px;
+    }
+    .details {
+      width: calc(100% - 145px);
+      &__title {
+        @include font(14, 18, 500);
+      }
+      &__options {
+        gap: 20px;
+        @include font(12, 16, 400);
+      }
+    }
+  }
+}

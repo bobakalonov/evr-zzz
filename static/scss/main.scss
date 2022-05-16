@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import './var';
+@import './mixins';
+@import './base';
+
+@import './components/audio-news-card';
+@import './components/news-card';
+@import './components/main-card';
+
+@import './pages/navigation';
+@import './pages/top-header-news';
+@import './pages/latest-news';
+@import './pages/group-news';
+@import './pages/advertising';
+@import './pages/special-news';
+@import './pages/interviews';
+@import './pages/footer';
+
+@import './pages/about-page';
+@import './pages/contact-page';
+@import './pages/terms-of-adv-page';
+@import './pages/news-detail';
+@import './pages/category-page';
+@import './pages/tag-page';

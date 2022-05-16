@@ -1,0 +1,125 @@
+.category-page {
+  margin: 50px 0;
+  .my-container {
+    padding: 30px;
+    background: $light;
+    border-radius: 12px;
+  }
+  .main-news {
+    &__head {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 30px;
+      margin-bottom: 30px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          357.42deg,
+          rgba(0, 0, 0, 0.8) -1.62%,
+          rgba(0, 0, 0, 0) 97.71%
+        );
+        z-index: 1;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .details {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        p {
+          @include font(14, 19, 400);
+          color: $light;
+        }
+        a {
+          @include font(27, 36, 600);
+          color: $light;
+          &:hover {
+            color: rgba($color: $light, $alpha: 0.8);
+          }
+        }
+      }
+    }
+  }
+  .sidebar-news {
+    position: sticky;
+    top: 0;
+    &__title {
+      @include font(27, 36, 600);
+      color: $dark;
+    }
+    .audio {
+      margin-bottom: 30px;
+      .card-news-audio {
+        border-bottom: 1px solid #e7e7e7;
+        padding: 20px 0;
+      }
+    }
+    .more {
+      .sidebar-news__title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@include media(960px) {
+  .category-page {
+    margin: 30px 0;
+    .my-container {
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .main-news {
+      &__head {
+        height: 500px;
+        border-radius: 10px;
+        padding: 20px;
+        .details {
+          a {
+            @include font(20, 26, 600);
+          }
+        }
+      }
+    }
+    .sidebar-news {
+      &__title {
+        @include font(20, 27, 600);
+      }
+    }
+  }
+}
+@include media(600px) {
+  .category-page {
+    .my-container {
+      padding: 15px;
+    }
+    .main-news {
+      &__head {
+        height: 300px;
+        padding: 15px;
+      }
+    }
+  }
+}
